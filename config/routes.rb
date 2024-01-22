@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
-  root 'servers#new'
+  root 'home#index'
+
   resources :servers, only: [:new, :create]
 end

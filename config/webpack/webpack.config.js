@@ -1,6 +1,10 @@
-// See the shakacode/shakapacker README and docs directory for advice on customizing your webpackConfig.
+// config/webpack/webpack.config.js
 const { generateWebpackConfig } = require('shakapacker')
 
-const webpackConfig = generateWebpackConfig()
+const customConfig = {
+  resolve: {
+    extensions: ['.css']
+  }
+}
 
-module.exports = webpackConfig
+module.exports = generateWebpackConfig()
